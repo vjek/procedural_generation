@@ -31,7 +31,7 @@ if os.name != "posix": #this will check if this is a posix compatible environmen
     print("This was meant to run under a posix OS, so it probably won't look right for you")
     os._exit(1)
 
-ts = os.get_terminal_size() #get the termina_size data
+ts = os.get_terminal_size() #get the terminal_size data
 term_width = ts.columns #columns for width
 term_length = ts.lines - 3 #rows for length, subtract a bit for prompt visibility
 # print out the screen full of colors
