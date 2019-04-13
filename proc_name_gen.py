@@ -6,10 +6,10 @@
 # 
 # Sample output is:
 #
-# :./proc-name-gen1.py 10
+# :./proc-name-gen.py 10
 # ['Tubeso', 'Cuti', 'Pare', 'Rilohi', 'Sesu', 'Xak', 'Mupe', 'Rodunu', 'Reca', 'Yawag', 'Yefas', 'Poro', 'Guvef', 'Mezeho', 'Rebuc', 'Kaloq'] 16 Xak 5
 # 
-# :./proc-name-gen1.py 2
+# :./proc-name-gen.py 2
 # ['Dih', 'Yeyax', 'Zoviwo', 'Bis', 'Ruhuhe', 'Hih', 'Vuhor', 'Pohos', 'Lovupo', 'Xusok', 'Yiti', 'Metupu', 'Befax', 'Xefug', 'Jara', 'Pekad', 'Bab', 'Gehub', 'Kec', 'Yamit', 'Suyal', 'Tedi', 'Sev', 'Vigili', 'Wec', 'Geh', 'Zevake', 'Lax'] 28 Befax 12
 ###
 import random,sys,string
