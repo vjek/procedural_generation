@@ -26,3 +26,9 @@
   You will need a graphical DISPLAY or x-forwarded display to permit this script to function.
   Also, the script will pause for a keypress at the end, before the canvas is destroyed.
   A screenshot is included as well, from Linux.
+  
+# proc_name_gen1
+  This script produces a list of names based on either a fixed value seed, or a seed
+  value provided on the command line as arg1.  A name is chosen out of the list, procedurally
+  and both the list of names and the one chosen will be the same, by seed value.
+  Typically, the names created are roughly pronounceable in English.
