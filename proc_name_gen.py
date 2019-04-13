@@ -14,7 +14,6 @@
 ###
 import random,sys,string
 
-
 def generate_name(length):
     VOWELS = "aeiou"
     #if you don't sort this join below , the set() - set() returns a random jumble.
