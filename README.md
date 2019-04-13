@@ -7,7 +7,7 @@
  The second script produces similar output, but with a procedurally chosen and colored character, as well.
  If you pass an argument to the scripts, it will use this as the random number seed rather than the default, and it will render the same on different machines.
 
-# symbols-24bit
+# symbols_24bit
   This script will produce a similar deterministic color field, but with Unicode characters, and double-width fields for visibility.  Random, yet deterministic: background color, foreground color, and Unicode symbol.
   
   As with the color_seed_demo, screenshots are provided, and if you provide an argument, it will use that for the seed value, and produce a repeatable output.  The screenshot is taken at 18-point in Linux, to show some detail of the Unicode symbols.
