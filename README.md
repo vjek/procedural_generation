@@ -18,3 +18,11 @@
   This script accepts a single optional command line argument as a seed, if desired.
   The location, shape and color of the rectangles is unique per seed.  A short delay
   is in place so the observer can watch the rectangles being drawn.
+
+# proctangles
+  This script will draw 60 deterministic rectangles on a tkinter canvas
+  using procedural generation so that it will be the same each time,but appear random.
+  This script accepts a single optional command line argument as a seed, if desired.
+  You will need a graphical DISPLAY or x-forwarded display to permit this script to function.
+  Also, the script will pause for a keypress at the end, before the canvas is destroyed.
+  A screenshot is included as well, from Linux.
