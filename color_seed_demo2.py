@@ -1,10 +1,7 @@
 #!/usr/bin/env python3
-# This script produces a deterministic color field
-# based on either a fixed value seed, or a seed
-# value provided on the command line as arg1.
-# It will print out the associated RGB colors, in
-# sequence, from the deterministic stream, and a char.
-# It will print one full screen of a given termsize.
+# This script produces a deterministic color field based on either a fixed value seed, or a seed
+# value provided on the command line as arg1. It will print out the associated RGB colors, in
+# sequence, from the deterministic stream, and a char. It will print one full screen of a given termsize.
 ###
 import random,os,sys,string
 
