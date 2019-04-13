@@ -17,7 +17,7 @@ def print_block(fg_red=255,fg_green=255,fg_blue=255,char=" ",bg_red=0,bg_green=0
 def reset_color(): #used to reset the \ESC codes
     print("\033[0m") # back to their defaults
 
-def get_next_rand(): #get the next determinstic value from the stream
+def get_next_rand(): #get the next deterministic value from the stream
     return chr(rand1.randint(0,255)) #return the next byte as char
 
 seed1=8675309 #a _completely_ random seed value..
