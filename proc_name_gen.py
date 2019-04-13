@@ -18,14 +18,14 @@ import random,sys,string
 def generate_name(length):
     VOWELS = "aeiou"
     #if you don't sort this join below , the set() - set() returns a random jumble.
-    CONSONANTS = "".join(sorted(set(string.ascii_lowercase) - set(VOWELS))) #length 21 (26-5)
+    CONSONANTS = "".join(sorted(set(string.ascii_lowercase) - set(VOWELS)))
     name = ""
     for i in range(length): #this length was chosen procedurally
         if i % 2 == 0: #if even, place a consonant
             name += rand1.choice(CONSONANTS)
         else: #otherwise, place a vowel
             name += rand1.choice(VOWELS)
-    return name #and give back the name to the caller
+    return name
 
 def create_name(): #function to pick name length
     min_name_length=3 #names can be short
@@ -33,9 +33,9 @@ def create_name(): #function to pick name length
     inval=ord(get_next_rand())
     name_length = int(mapFromTo(inval,0,255,min_name_length,max_name_length)) #pick a length from randint->range
     rand_name = generate_name(name_length) #get the name from the generator
-    return rand_name #return the random name to the caller
+    return rand_name
 
-def get_next_rand(): #get the next determinstic value from the stream
+def get_next_rand(): #get the next deterministic value from the stream
     return chr(rand1.randint(0,255)) #return the next byte as char
 
 def mapFromTo(x,a,b,c,d): #inval,start1,end1,start2,end2 for range translation
@@ -55,5 +55,5 @@ for a in range(number_of_names): #name generation loop
     name_storage += [(create_name().title())] #store them;first letter capitalized.
     inval=ord(get_next_rand())
     name_to_pick=int(mapFromTo(inval,0,255,0,number_of_names)) #use rand range to pick # of names
-#we're at the end, so print out the list ofnames, number of names, a random name, and it's index
+#we're at the end, so print out the list of names, number of names, a random name, and it's index
 print(name_storage,len(name_storage),name_storage[name_to_pick],name_to_pick)
