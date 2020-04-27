@@ -32,3 +32,7 @@
   value provided on the command line as arg1.  A name is chosen out of the list, procedurally
   and both the list of names and the one chosen will be the same, by seed value.
   Typically, the names created are roughly pronounceable in English.
+
+# otp-enc.py / otp-dec.py
+  These scripts accept a passphrase, generate a procedural dictionary & OTP source, and
+  encrypt or decrypt messages on the CLI.
