@@ -40,7 +40,7 @@ rand1.seed(hashphrase) #use the hashed passphrase as seed
 cust_dict=make_custom_dict(rand1)
 
 #take input
-print("Enter the message to encrypt using [a-zA-Z0-9,._?], space, newline. End with newline + ctrl-d: ")
+print("Enter the message to encrypt using [a-zA-Z0-9,._-'!?], space, newline. End with newline + ctrl-d: ")
 cleartext1=sys.stdin.read().rstrip()
 #this produces the message line, using the custom dictionary entries
 try:
