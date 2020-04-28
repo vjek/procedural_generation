@@ -22,7 +22,7 @@ def make_custom_dict(rand1):
     x=0
     my_dict={}
     dictionary = list(range(0,99))
-    letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,._-'!? \n"
+    letters = '''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`~!@#$%^&*()-_=+[]\{}|;':",./<>? \n'''
     rand1.shuffle(dictionary) #this shuffle will be procedural based on rand1 seed
     for letter in letters:
         my_dict[letter]="%02d" % dictionary[x]
@@ -40,7 +40,7 @@ rand1.seed(hashphrase) #use the hashed passphrase as seed
 cust_dict=make_custom_dict(rand1)
 
 #take input
-print("Enter the message to encrypt using [a-zA-Z0-9,._-'!?], space, newline. End with newline + ctrl-d: ")
+print("Enter the message to encrypt. You may use any printable key on the us-english keyboard, plus space and newline.  End with newline + ctrl-d: ")
 cleartext1=sys.stdin.read().rstrip()
 #this produces the message line, using the custom dictionary entries
 try:
