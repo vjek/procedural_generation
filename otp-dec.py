@@ -22,7 +22,7 @@ def make_custom_dict(rand1):
     x=0
     my_dict={}
     dictionary = list(range(0,99))
-    letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,._-'!? \n"
+    letters = '''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`~!@#$%^&*()-_=+[]\{}|;':",./<>? \n'''
     rand1.shuffle(dictionary) #this shuffle will be procedural based on rand1 seed
     for letter in letters:
         my_dict[letter]="%02d" % dictionary[x]
