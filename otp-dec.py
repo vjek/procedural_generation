@@ -42,8 +42,9 @@ cust_dict=make_custom_dict(rand1)
 cust_dict = dict(zip(cust_dict.values(),cust_dict.keys()))
 
 #take input
-print("Enter the message to decrypt. End with newline + ctrl-d: ")
+print("Enter the message to decrypt, up to 2048 bytes per line. End with newline + ctrl-d: ")
 ciphertext1=sys.stdin.read().rstrip()
+ciphertext1=ciphertext1.replace('\n','')
 s_len=len(ciphertext1)
 
 #generate the procedural OTP key
