@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # script to demonstrate mod10 Message + Key = Ciphertext
-# by vjek, 20200426
+# by vjek, 20200426, updated 20230422
 ###
 from getpass import getpass
 import random,hashlib,sys
@@ -36,12 +36,20 @@ def mod10(num): #this function will discard the tens place of a given two digit 
 #first, get the hash of a passphrase, as a random seed
 hashphrase = getphrase()
 rand1=random.Random()
+rand2=random.Random()
 rand1.seed(hashphrase) #use the hashed passphrase as seed
 cust_dict=make_custom_dict(rand1)
 
-#take input
+#take input 
 print("Enter the message to encrypt. You may use any printable key on the us-english keyboard, plus space and newline.  End with newline + ctrl-d: ")
 cleartext1=sys.stdin.read().rstrip()
+if len(cleartext1) < 1:
+    print("Your message is too short.")
+    exit()
+
+hashclear = hashlib.sha512(cleartext1.encode('utf-8')).hexdigest() #get hash of message
+cleartext1=hashclear+cleartext1 #prepend message hash to message
+
 #this produces the message line, using the custom dictionary entries
 try:
     cleartext1=''.join(str(cust_dict[c]) for c in cleartext1)
