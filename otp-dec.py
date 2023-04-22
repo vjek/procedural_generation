@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # script to demonstrate mod10 ciphertext - key = message
-# by vjek, 20200426
+# by vjek, 20200426, updated 20230422
 ###
 from getpass import getpass
 import random,hashlib,sys
@@ -41,7 +41,7 @@ cust_dict=make_custom_dict(rand1)
 #reverse the dict to lookup numbers -> letters
 cust_dict = dict(zip(cust_dict.values(),cust_dict.keys()))
 
-#take input
+#take input 
 print("Enter the message to decrypt, up to 2048 bytes per line. End with newline + ctrl-d: ")
 ciphertext1=sys.stdin.read().rstrip()
 ciphertext1=ciphertext1.replace('\n','')
@@ -66,4 +66,14 @@ for a in range(0,s_len,2):
         output += cust_dict[ciph1[a:a+2]]
     except:
         pass
-print(output)
+#capture sha-512 header of 128 bytes (UTF8 encoded) and split rest of message
+hashclear=output[:128]
+message_body=output[128:]
+if len(message_body) < 1:
+    print("Your message is too short.")
+    exit()
+hash_compare = hashlib.sha512(message_body.encode('utf-8')).hexdigest() #get hash of message
+if hashclear == hash_compare: #compare original hash to computed hash
+    print(message_body) #and print if they match
+else:
+    print("Either the integrity of your message is compromised, or something else went wrong.")
