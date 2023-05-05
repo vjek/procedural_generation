@@ -36,7 +36,6 @@ def mod10(num): #this function will discard the tens place of a given two digit 
 #first, get the hash of a passphrase, as a random seed
 hashphrase = getphrase()
 rand1=random.Random()
-rand2=random.Random()
 rand1.seed(hashphrase) #use the hashed passphrase as seed
 cust_dict=make_custom_dict(rand1)
 
